@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2a65db87991cbb47e327eee7abc53a64 {
+                    position: relative;
+                    width: 700.0px;
+                    height: 550.0px;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_2a65db87991cbb47e327eee7abc53a64" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2a65db87991cbb47e327eee7abc53a64 = L.map(
+                "map_2a65db87991cbb47e327eee7abc53a64",
+                {
+                    center: [37.5066986, 127.0260172],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_75e67cb2a43cfd2854dc469fa9e450f1 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_75e67cb2a43cfd2854dc469fa9e450f1.addTo(map_2a65db87991cbb47e327eee7abc53a64);
+        
+    
+            var marker_4cd0773232af1a7db5f693b656c4e9e5 = L.marker(
+                [37.5066986, 127.0260172],
+                {}
+            ).addTo(map_2a65db87991cbb47e327eee7abc53a64);
+        
+    
+            var beautify_icon_8882789816f110c1ac256af6e52b5e5a = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#FFF", "borderColor": "black", "borderWidth": 2, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:12px", "isAlphaNumericIcon": true, "spin": false, "text": NaN, "textColor": "black"}
+            )
+            marker_4cd0773232af1a7db5f693b656c4e9e5.setIcon(beautify_icon_8882789816f110c1ac256af6e52b5e5a);
+        
+    
+        var popup_45ee6666cf1e9ad346ef2f1050e2108c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24175b2df846323460762a062ef18b52 = $(`<div id="html_24175b2df846323460762a062ef18b52" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=45000,45000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2434452416' target="_blank">논현동 183-15번지 0층</a><br/>전용63평<br/>보증금45000만원 / 월세4500만원 / 관리비0.0만원<br/>NOC 21.4<br/><a href='https://map.naver.com/v5/search/논현동 183-15번지' target="_blank">네이버지도</a></div></div>`)[0];
+                popup_45ee6666cf1e9ad346ef2f1050e2108c.setContent(html_24175b2df846323460762a062ef18b52);
+            
+        
+
+        marker_4cd0773232af1a7db5f693b656c4e9e5.bindPopup(popup_45ee6666cf1e9ad346ef2f1050e2108c)
+        ;
+
+        
+    
+    
+            marker_4cd0773232af1a7db5f693b656c4e9e5.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 183-15번지 0층<br/>전용209.8평<br/>보증금45000만원 / 월세4500만원 / 관리비0.0만원<br/>NOC 21.4<br/>자주식6대 / 기계식0대<br/>24년03월 준공<br/>첫 광고 등록일:24.05.09</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
