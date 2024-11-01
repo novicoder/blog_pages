@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_74e65d0a596c19baf8fd17646712c496 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_74e65d0a596c19baf8fd17646712c496" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_74e65d0a596c19baf8fd17646712c496 = L.map(
+                "map_74e65d0a596c19baf8fd17646712c496",
+                {
+                    center: [37.51053721, 127.0430607],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e05992d370bbb2ae08c709bafba4c19a = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 14, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_e05992d370bbb2ae08c709bafba4c19a.addTo(map_74e65d0a596c19baf8fd17646712c496);
+        
+    
+            var marker_cluster_cb803ce3129735b26cc9371863b6f198 = L.markerClusterGroup(
+                {"disableClusteringAtZoom": 16}
+            );
+        
+    
+            var marker_3884f04d1d46512464952afc326e9c62 = L.marker(
+                [37.5192013529674, 127.050785043316],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_5a227d05fd9077166bb40d7eb9bad1c0 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.1", "textColor": "white"}
+            )
+            marker_3884f04d1d46512464952afc326e9c62.setIcon(beautify_icon_5a227d05fd9077166bb40d7eb9bad1c0);
+        
+    
+        var popup_a066a3d73f58fc150b9c0d6ca5a4f092 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_39ffec44db2d0dc7517800de1409e51f = $(`<div id="html_39ffec44db2d0dc7517800de1409e51f" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2448492830' target='_blank'>청담동 76-6번지 -1층</a><br/>전용 66평<br/>보증금 6000만원 / 월세 400만원 / 관리비 70만원<br/>NOC 7.1<br/>자주식5대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 76-6번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-3182&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_a066a3d73f58fc150b9c0d6ca5a4f092.setContent(html_39ffec44db2d0dc7517800de1409e51f);
+            
+        
+
+        marker_3884f04d1d46512464952afc326e9c62.bindPopup(popup_a066a3d73f58fc150b9c0d6ca5a4f092)
+        ;
+
+        
+    
+    
+            marker_3884f04d1d46512464952afc326e9c62.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 76-6번지 -1층<br/>전용 66평<br/>보증금 6000만원 / 월세 400만원 / 관리비 70만원<br/>84년07월 준공<br/>첫 광고 등록일: 23.07.29</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3d1970d7165fd40be08e7a10cbcefc32 = L.marker(
+                [37.5122565293364, 127.034501140521],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_b0ada2e6946cba35385fed8885c96e7e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.9", "textColor": "white"}
+            )
+            marker_3d1970d7165fd40be08e7a10cbcefc32.setIcon(beautify_icon_b0ada2e6946cba35385fed8885c96e7e);
+        
+    
+        var popup_08888202aa0fc0a892f4255ff10d5688 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f19d318695caf250aa04c82cb68302d3 = $(`<div id="html_f19d318695caf250aa04c82cb68302d3" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2448130436' target='_blank'>논현동 219-6번지 -1층</a><br/>전용 56평<br/>보증금 5000만원 / 월세 300만원 / 관리비 30만원<br/>NOC 5.9<br/>자주식6대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 219-6번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-23934&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_08888202aa0fc0a892f4255ff10d5688.setContent(html_f19d318695caf250aa04c82cb68302d3);
+            
+        
+
+        marker_3d1970d7165fd40be08e7a10cbcefc32.bindPopup(popup_08888202aa0fc0a892f4255ff10d5688)
+        ;
+
+        
+    
+    
+            marker_3d1970d7165fd40be08e7a10cbcefc32.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 219-6번지 -1층<br/>전용 56평<br/>보증금 5000만원 / 월세 300만원 / 관리비 30만원<br/>91년10월 준공<br/>첫 광고 등록일: 23.07.26</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_00a407476fa477b91ecce15b625ce2a4 = L.marker(
+                [37.5180126328644, 127.026690926557],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_cab913c7588b78204bd3c60744be7a37 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.8", "textColor": "green"}
+            )
+            marker_00a407476fa477b91ecce15b625ce2a4.setIcon(beautify_icon_cab913c7588b78204bd3c60744be7a37);
+        
+    
+        var popup_7338cc440581c22b93cc6ea84414c3c2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6cf5f3cba16bda0cd621daf6e6e39280 = $(`<div id="html_6cf5f3cba16bda0cd621daf6e6e39280" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2448914240' target='_blank'>논현동 9번지 -2층</a><br/>전용 69평<br/>보증금 3000만원 / 월세 350만원 / 관리비 50만원<br/>NOC 5.8<br/>자주식15대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 9번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-23218&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_7338cc440581c22b93cc6ea84414c3c2.setContent(html_6cf5f3cba16bda0cd621daf6e6e39280);
+            
+        
+
+        marker_00a407476fa477b91ecce15b625ce2a4.bindPopup(popup_7338cc440581c22b93cc6ea84414c3c2)
+        ;
+
+        
+    
+    
+            marker_00a407476fa477b91ecce15b625ce2a4.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 9번지 -2층<br/>전용 69평<br/>보증금 3000만원 / 월세 350만원 / 관리비 50만원<br/>05년01월 준공<br/>첫 광고 등록일: 24.09.04</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6f6294e247785e9ac9b69d83cf2c134 = L.marker(
+                [37.4890655724105, 127.014229462514],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_c78857eabb0ebf6d030f8e3b83324745 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.8", "textColor": "white"}
+            )
+            marker_c6f6294e247785e9ac9b69d83cf2c134.setIcon(beautify_icon_c78857eabb0ebf6d030f8e3b83324745);
+        
+    
+        var popup_42343a2f1a23f4cf772679d6fae058de = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e3a39bb73411c52226c9b182a6ca7b35 = $(`<div id="html_e3a39bb73411c52226c9b182a6ca7b35" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449017214' target='_blank'>서초동 1577-7번지 -1층</a><br/>전용 82평<br/>보증금 6000만원 / 월세 400만원 / 관리비 75만원<br/>NOC 5.8<br/>자주식0대 / 기계식15대<br/><a href='https://map.naver.com/v5/search/서초동 1577-7번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-15952&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_42343a2f1a23f4cf772679d6fae058de.setContent(html_e3a39bb73411c52226c9b182a6ca7b35);
+            
+        
+
+        marker_c6f6294e247785e9ac9b69d83cf2c134.bindPopup(popup_42343a2f1a23f4cf772679d6fae058de)
+        ;
+
+        
+    
+    
+            marker_c6f6294e247785e9ac9b69d83cf2c134.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1577-7번지 -1층<br/>전용 82평<br/>보증금 6000만원 / 월세 400만원 / 관리비 75만원<br/>93년10월 준공<br/>첫 광고 등록일: 23.07.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_377fb0cd75b7c5d6d075b09faa11526d = L.marker(
+                [37.5116271, 127.0363262],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_fbe387bfaebd3db9b87b9e52206dcca1 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "10.2", "textColor": "white"}
+            )
+            marker_377fb0cd75b7c5d6d075b09faa11526d.setIcon(beautify_icon_fbe387bfaebd3db9b87b9e52206dcca1);
+        
+    
+        var popup_2b72b19ec978c994943e1a50a4d8e66b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bac2c4e557f96def49c3ee259e192754 = $(`<div id="html_bac2c4e557f96def49c3ee259e192754" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449649727' target='_blank'>논현동 261번지 -1층</a><br/>전용 81평<br/>보증금 10000만원 / 월세 600만원 / 관리비 225만원<br/>NOC 10.2<br/>자주식135대 / 기계식50대<br/><a href='https://map.naver.com/v5/search/논현동 261번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-6941&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_2b72b19ec978c994943e1a50a4d8e66b.setContent(html_bac2c4e557f96def49c3ee259e192754);
+            
+        
+
+        marker_377fb0cd75b7c5d6d075b09faa11526d.bindPopup(popup_2b72b19ec978c994943e1a50a4d8e66b)
+        ;
+
+        
+    
+    
+            marker_377fb0cd75b7c5d6d075b09faa11526d.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 261번지 -1층<br/>전용 81평<br/>보증금 10000만원 / 월세 600만원 / 관리비 225만원<br/>97년04월 준공<br/>첫 광고 등록일: 24.05.09</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_291126e0433c409a87bd93cb4f3a2cea = L.marker(
+                [37.5090021992671, 127.055905892019],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_aa40662a1ca409b80cf5fd5e0a018af7 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.6", "textColor": "white"}
+            )
+            marker_291126e0433c409a87bd93cb4f3a2cea.setIcon(beautify_icon_aa40662a1ca409b80cf5fd5e0a018af7);
+        
+    
+        var popup_598f05f1d3338bb9255e29f09c8107ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ff66fc32380db8fb6e86173bca9afa40 = $(`<div id="html_ff66fc32380db8fb6e86173bca9afa40" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=17000,17000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449623858' target='_blank'>삼성동 156-3번지 -1층</a><br/>전용 73평<br/>보증금 17000만원 / 월세 500만원 / 관리비 200만원<br/>NOC 9.6<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/삼성동 156-3번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-22005&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_598f05f1d3338bb9255e29f09c8107ac.setContent(html_ff66fc32380db8fb6e86173bca9afa40);
+            
+        
+
+        marker_291126e0433c409a87bd93cb4f3a2cea.bindPopup(popup_598f05f1d3338bb9255e29f09c8107ac)
+        ;
+
+        
+    
+    
+            marker_291126e0433c409a87bd93cb4f3a2cea.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">삼성동 156-3번지 -1층<br/>전용 73평<br/>보증금 17000만원 / 월세 500만원 / 관리비 200만원<br/>92년12월 준공<br/>첫 광고 등록일: 23.07.31</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_73010ef5c0d54c723b731cb1e8987178 = L.marker(
+                [37.50898870496926, 127.0559075317024],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_869e0bd376a1c3babccd7affa73fe27b = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.1", "textColor": "white"}
+            )
+            marker_73010ef5c0d54c723b731cb1e8987178.setIcon(beautify_icon_869e0bd376a1c3babccd7affa73fe27b);
+        
+    
+        var popup_f88c9c4d39004bdb6a6a76b6b3cc33c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3d90b9f88e105d5215950f93336e1fca = $(`<div id="html_3d90b9f88e105d5215950f93336e1fca" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=17000,17000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449623858' target='_blank'>삼성동 156-3번지 -1층</a><br/>전용 77평<br/>보증금 17000만원 / 월세 700만원 / 관리비 0만원<br/>NOC 9.1<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/삼성동 156-3번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-22005&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_f88c9c4d39004bdb6a6a76b6b3cc33c0.setContent(html_3d90b9f88e105d5215950f93336e1fca);
+            
+        
+
+        marker_73010ef5c0d54c723b731cb1e8987178.bindPopup(popup_f88c9c4d39004bdb6a6a76b6b3cc33c0)
+        ;
+
+        
+    
+    
+            marker_73010ef5c0d54c723b731cb1e8987178.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">삼성동 156-3번지 -1층<br/>전용 77평<br/>보증금 17000만원 / 월세 700만원 / 관리비 0만원<br/>92년12월 준공<br/>첫 광고 등록일: 23.07.31</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4bf311371b9b2fede7bdd23cd3d2af51 = L.marker(
+                [37.4983093529845, 127.042196065004],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_58bed56fddb7e1089fbe869c468afc34 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.0", "textColor": "white"}
+            )
+            marker_4bf311371b9b2fede7bdd23cd3d2af51.setIcon(beautify_icon_58bed56fddb7e1089fbe869c468afc34);
+        
+    
+        var popup_d843a3ee89eb34f1523524bfe3c20da6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f9630a2c54c31132825a45aafc435d39 = $(`<div id="html_f9630a2c54c31132825a45aafc435d39" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=4000,4000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449143534' target='_blank'>역삼동 729-32번지 -1층</a><br/>전용 55평<br/>보증금 4000만원 / 월세 300만원 / 관리비 30만원<br/>NOC 6.0<br/>자주식6대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/역삼동 729-32번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-100262633&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_d843a3ee89eb34f1523524bfe3c20da6.setContent(html_f9630a2c54c31132825a45aafc435d39);
+            
+        
+
+        marker_4bf311371b9b2fede7bdd23cd3d2af51.bindPopup(popup_d843a3ee89eb34f1523524bfe3c20da6)
+        ;
+
+        
+    
+    
+            marker_4bf311371b9b2fede7bdd23cd3d2af51.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">역삼동 729-32번지 -1층<br/>전용 55평<br/>보증금 4000만원 / 월세 300만원 / 관리비 30만원<br/>17년03월 준공<br/>첫 광고 등록일: 24.06.14</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0012d19d7a4cbe7cc34d31ae2bbf41fd = L.marker(
+                [37.5512728287216, 127.04641319946],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_0c1ece537fdcec7ca33f4aca9d1efdbf = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.2", "textColor": "white"}
+            )
+            marker_0012d19d7a4cbe7cc34d31ae2bbf41fd.setIcon(beautify_icon_0c1ece537fdcec7ca33f4aca9d1efdbf);
+        
+    
+        var popup_619e178d985581d53905a052b2223c7a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_31523d2093272152031d80e30f434f0b = $(`<div id="html_31523d2093272152031d80e30f434f0b" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=4500,4500,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449512542' target='_blank'>성수동1가 656-882번지 -1층</a><br/>전용 49평<br/>보증금 4500만원 / 월세 450만원 / 관리비 0만원<br/>NOC 9.2<br/>자주식107대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/성수동1가 656-882번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11200-100242377&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_619e178d985581d53905a052b2223c7a.setContent(html_31523d2093272152031d80e30f434f0b);
+            
+        
+
+        marker_0012d19d7a4cbe7cc34d31ae2bbf41fd.bindPopup(popup_619e178d985581d53905a052b2223c7a)
+        ;
+
+        
+    
+    
+            marker_0012d19d7a4cbe7cc34d31ae2bbf41fd.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">성수동1가 656-882번지 -1층<br/>전용 49평<br/>보증금 4500만원 / 월세 450만원 / 관리비 0만원<br/>20년11월 준공<br/>첫 광고 등록일: 24.03.12</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_123336f9080c2762961c1940003cb03f = L.marker(
+                [37.55127745246803, 127.04640694642022],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_50478a66380e784a2609396e220172b4 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.6", "textColor": "white"}
+            )
+            marker_123336f9080c2762961c1940003cb03f.setIcon(beautify_icon_50478a66380e784a2609396e220172b4);
+        
+    
+        var popup_67e850e50b706dadd0256bc6b7e96ebd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e3fb2b7cefa576f48440d2ca8b99df75 = $(`<div id="html_e3fb2b7cefa576f48440d2ca8b99df75" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=4700,4700,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449512542' target='_blank'>성수동1가 656-882번지 -1층</a><br/>전용 49평<br/>보증금 4700만원 / 월세 470만원 / 관리비 0만원<br/>NOC 9.6<br/>자주식107대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/성수동1가 656-882번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11200-100242377&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_67e850e50b706dadd0256bc6b7e96ebd.setContent(html_e3fb2b7cefa576f48440d2ca8b99df75);
+            
+        
+
+        marker_123336f9080c2762961c1940003cb03f.bindPopup(popup_67e850e50b706dadd0256bc6b7e96ebd)
+        ;
+
+        
+    
+    
+            marker_123336f9080c2762961c1940003cb03f.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">성수동1가 656-882번지 -1층<br/>전용 49평<br/>보증금 4700만원 / 월세 470만원 / 관리비 0만원<br/>20년11월 준공<br/>첫 광고 등록일: 24.03.12</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f1c37138dc0ed322a74545db041cbb6e = L.marker(
+                [37.5116371257546, 127.044134984822],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_a67533b957885eb7c62a10c2b6cc1052 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.5", "textColor": "white"}
+            )
+            marker_f1c37138dc0ed322a74545db041cbb6e.setIcon(beautify_icon_a67533b957885eb7c62a10c2b6cc1052);
+        
+    
+        var popup_1f8d2c17d4942b8bac6d42a59316d21f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f1b71a8c6157bcf2921c522791c5a2ef = $(`<div id="html_f1b71a8c6157bcf2921c522791c5a2ef" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=4500,4500,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450053933' target='_blank'>삼성동 35-25번지 -1층</a><br/>전용 56평<br/>보증금 4500만원 / 월세 350만원 / 관리비 70만원<br/>NOC 7.5<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/삼성동 35-25번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-3697&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_1f8d2c17d4942b8bac6d42a59316d21f.setContent(html_f1b71a8c6157bcf2921c522791c5a2ef);
+            
+        
+
+        marker_f1c37138dc0ed322a74545db041cbb6e.bindPopup(popup_1f8d2c17d4942b8bac6d42a59316d21f)
+        ;
+
+        
+    
+    
+            marker_f1c37138dc0ed322a74545db041cbb6e.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">삼성동 35-25번지 -1층<br/>전용 56평<br/>보증금 4500만원 / 월세 350만원 / 관리비 70만원<br/>93년01월 준공<br/>첫 광고 등록일: 23.11.23</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b2c05d1d7b66fec4b844f060fceb5c14 = L.marker(
+                [37.5230917354442, 127.046779567596],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_2c0edad6af377422c804fb099b14ef6c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "11.3", "textColor": "white"}
+            )
+            marker_b2c05d1d7b66fec4b844f060fceb5c14.setIcon(beautify_icon_2c0edad6af377422c804fb099b14ef6c);
+        
+    
+        var popup_0ed36b603c223766786d850b4be0165b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0fff17c586e82914219d8135c56b7d94 = $(`<div id="html_0fff17c586e82914219d8135c56b7d94" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450460249' target='_blank'>청담동 12-16번지 -1층</a><br/>전용 60평<br/>보증금 10000만원 / 월세 610만원 / 관리비 70만원<br/>NOC 11.3<br/>자주식7대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 12-16번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-100209841&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_0ed36b603c223766786d850b4be0165b.setContent(html_0fff17c586e82914219d8135c56b7d94);
+            
+        
+
+        marker_b2c05d1d7b66fec4b844f060fceb5c14.bindPopup(popup_0ed36b603c223766786d850b4be0165b)
+        ;
+
+        
+    
+    
+            marker_b2c05d1d7b66fec4b844f060fceb5c14.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 12-16번지 -1층<br/>전용 60평<br/>보증금 10000만원 / 월세 610만원 / 관리비 70만원<br/>11년12월 준공<br/>첫 광고 등록일: 24.06.08</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2987cbded88bc8d1872175b940867d33 = L.marker(
+                [37.52311155674835, 127.0467355778865],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_ac4666383e96d326a1a06eb14b1f4b4f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "11.3", "textColor": "white"}
+            )
+            marker_2987cbded88bc8d1872175b940867d33.setIcon(beautify_icon_ac4666383e96d326a1a06eb14b1f4b4f);
+        
+    
+        var popup_e90a59f219aa9e3eb7a640a3d4e7c276 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a6f29bddcaefd922593e03cb5090e308 = $(`<div id="html_a6f29bddcaefd922593e03cb5090e308" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450460249' target='_blank'>청담동 12-16번지 -1층</a><br/>전용 60평<br/>보증금 10000만원 / 월세 680만원 / 관리비 0만원<br/>NOC 11.3<br/>자주식7대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 12-16번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-100209841&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_e90a59f219aa9e3eb7a640a3d4e7c276.setContent(html_a6f29bddcaefd922593e03cb5090e308);
+            
+        
+
+        marker_2987cbded88bc8d1872175b940867d33.bindPopup(popup_e90a59f219aa9e3eb7a640a3d4e7c276)
+        ;
+
+        
+    
+    
+            marker_2987cbded88bc8d1872175b940867d33.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 12-16번지 -1층<br/>전용 60평<br/>보증금 10000만원 / 월세 680만원 / 관리비 0만원<br/>11년12월 준공<br/>첫 광고 등록일: 24.06.08</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9d8b854ea3f0fe2d97f476e0ca0beb03 = L.marker(
+                [37.5213605078184, 127.044075440263],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_0d1c307093bc03d6478247d12ff32fa3 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#87CEEB", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "17.0", "textColor": "white"}
+            )
+            marker_9d8b854ea3f0fe2d97f476e0ca0beb03.setIcon(beautify_icon_0d1c307093bc03d6478247d12ff32fa3);
+        
+    
+        var popup_3075ac7f0da634477d782a5f5b52f23b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f9a9fe0a071ed56b5c835127414b6f0e = $(`<div id="html_f9a9fe0a071ed56b5c835127414b6f0e" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450714382' target='_blank'>청담동 16번지 -1층</a><br/>전용 50평<br/>보증금 10000만원 / 월세 800만원 / 관리비 50만원<br/>NOC 17.0<br/>자주식8대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 16번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-100266834&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_3075ac7f0da634477d782a5f5b52f23b.setContent(html_f9a9fe0a071ed56b5c835127414b6f0e);
+            
+        
+
+        marker_9d8b854ea3f0fe2d97f476e0ca0beb03.bindPopup(popup_3075ac7f0da634477d782a5f5b52f23b)
+        ;
+
+        
+    
+    
+            marker_9d8b854ea3f0fe2d97f476e0ca0beb03.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 16번지 -1층<br/>전용 50평<br/>보증금 10000만원 / 월세 800만원 / 관리비 50만원<br/>17년10월 준공<br/>첫 광고 등록일: 23.09.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_028acb27852dc25c27cadd8627dfd3f5 = L.marker(
+                [37.52134100542886, 127.0440825161925],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_e43ecd7179832ac14ea4f531a238b963 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#87CEEB", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "18.2", "textColor": "white"}
+            )
+            marker_028acb27852dc25c27cadd8627dfd3f5.setIcon(beautify_icon_e43ecd7179832ac14ea4f531a238b963);
+        
+    
+        var popup_2d46c1c711c2b125a443cc14c0b9f609 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d291b29cbbebd6cc95c235673c5b55f7 = $(`<div id="html_d291b29cbbebd6cc95c235673c5b55f7" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450714382' target='_blank'>청담동 16번지 -1층</a><br/>전용 52평<br/>보증금 10000만원 / 월세 900만원 / 관리비 50만원<br/>NOC 18.2<br/>자주식8대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 16번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-100266834&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_2d46c1c711c2b125a443cc14c0b9f609.setContent(html_d291b29cbbebd6cc95c235673c5b55f7);
+            
+        
+
+        marker_028acb27852dc25c27cadd8627dfd3f5.bindPopup(popup_2d46c1c711c2b125a443cc14c0b9f609)
+        ;
+
+        
+    
+    
+            marker_028acb27852dc25c27cadd8627dfd3f5.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 16번지 -1층<br/>전용 52평<br/>보증금 10000만원 / 월세 900만원 / 관리비 50만원<br/>17년10월 준공<br/>첫 광고 등록일: 23.09.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6c71619e3bdc5d8530879a2a092ade29 = L.marker(
+                [37.5068509336286, 127.037800040155],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_472b1d615587c499163e0558a9fff697 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.5", "textColor": "white"}
+            )
+            marker_6c71619e3bdc5d8530879a2a092ade29.setIcon(beautify_icon_472b1d615587c499163e0558a9fff697);
+        
+    
+        var popup_aecf295b8e81b01787dd8925736441e5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_64d91e9e40b5f42fcd21d5c9b04a5f03 = $(`<div id="html_64d91e9e40b5f42fcd21d5c9b04a5f03" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450751360' target='_blank'>역삼동 656-3번지 -1층</a><br/>전용 49평<br/>보증금 3000만원 / 월세 320만원 / 관리비 0만원<br/>NOC 6.5<br/>자주식5대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/역삼동 656-3번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-10894&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_aecf295b8e81b01787dd8925736441e5.setContent(html_64d91e9e40b5f42fcd21d5c9b04a5f03);
+            
+        
+
+        marker_6c71619e3bdc5d8530879a2a092ade29.bindPopup(popup_aecf295b8e81b01787dd8925736441e5)
+        ;
+
+        
+    
+    
+            marker_6c71619e3bdc5d8530879a2a092ade29.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">역삼동 656-3번지 -1층<br/>전용 49평<br/>보증금 3000만원 / 월세 320만원 / 관리비 0만원<br/>06년07월 준공<br/>첫 광고 등록일: 24.05.13</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c56013c48f605320dd2262a00705908 = L.marker(
+                [37.5271025249041, 127.045451091551],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_172bc771470e7fd96e37e44ac95dd412 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "13.5", "textColor": "white"}
+            )
+            marker_7c56013c48f605320dd2262a00705908.setIcon(beautify_icon_172bc771470e7fd96e37e44ac95dd412);
+        
+    
+        var popup_5de51aa465a0ccf6f44fbc9f5bd5d66a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7a5913e1654bc71c38cb608791da433c = $(`<div id="html_7a5913e1654bc71c38cb608791da433c" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450615106' target='_blank'>청담동 141-11번지 -1층</a><br/>전용 57평<br/>보증금 10000만원 / 월세 700만원 / 관리비 72만원<br/>NOC 13.5<br/>자주식5대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 141-11번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-6251&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_5de51aa465a0ccf6f44fbc9f5bd5d66a.setContent(html_7a5913e1654bc71c38cb608791da433c);
+            
+        
+
+        marker_7c56013c48f605320dd2262a00705908.bindPopup(popup_5de51aa465a0ccf6f44fbc9f5bd5d66a)
+        ;
+
+        
+    
+    
+            marker_7c56013c48f605320dd2262a00705908.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 141-11번지 -1층<br/>전용 57평<br/>보증금 10000만원 / 월세 700만원 / 관리비 72만원<br/>01년06월 준공<br/>첫 광고 등록일: 24.04.23</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1db071f7492f41ed50f67c4f38766759 = L.marker(
+                [37.52715083852353, 127.04541744600692],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_046e272eb5c55656637b81610e2784aa = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#87CEEB", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "15.3", "textColor": "white"}
+            )
+            marker_1db071f7492f41ed50f67c4f38766759.setIcon(beautify_icon_046e272eb5c55656637b81610e2784aa);
+        
+    
+        var popup_ff11643fd9de0467f16921bf07d0a66b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9c3adce41b21ebd2bdafc1528167c01f = $(`<div id="html_9c3adce41b21ebd2bdafc1528167c01f" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450615106' target='_blank'>청담동 141-11번지 -1층</a><br/>전용 57평<br/>보증금 10000만원 / 월세 800만원 / 관리비 72만원<br/>NOC 15.3<br/>자주식5대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 141-11번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-6251&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_ff11643fd9de0467f16921bf07d0a66b.setContent(html_9c3adce41b21ebd2bdafc1528167c01f);
+            
+        
+
+        marker_1db071f7492f41ed50f67c4f38766759.bindPopup(popup_ff11643fd9de0467f16921bf07d0a66b)
+        ;
+
+        
+    
+    
+            marker_1db071f7492f41ed50f67c4f38766759.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 141-11번지 -1층<br/>전용 57평<br/>보증금 10000만원 / 월세 800만원 / 관리비 72만원<br/>01년06월 준공<br/>첫 광고 등록일: 24.04.23</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_697b5ce427a8adef8bd67477d891b980 = L.marker(
+                [37.521651022853, 127.028782156863],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_62100525d51a44b600a659096945b787 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.4", "textColor": "white"}
+            )
+            marker_697b5ce427a8adef8bd67477d891b980.setIcon(beautify_icon_62100525d51a44b600a659096945b787);
+        
+    
+        var popup_d61929d44cd832fd72f7f9581d0ec959 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aa7c705623a5b964d706c2cf951aecef = $(`<div id="html_aa7c705623a5b964d706c2cf951aecef" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2451036009' target='_blank'>신사동 591-13번지 -1층</a><br/>전용 66평<br/>보증금 5000만원 / 월세 370만원 / 관리비 50만원<br/>NOC 6.4<br/>자주식7대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/신사동 591-13번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-6820&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_d61929d44cd832fd72f7f9581d0ec959.setContent(html_aa7c705623a5b964d706c2cf951aecef);
+            
+        
+
+        marker_697b5ce427a8adef8bd67477d891b980.bindPopup(popup_d61929d44cd832fd72f7f9581d0ec959)
+        ;
+
+        
+    
+    
+            marker_697b5ce427a8adef8bd67477d891b980.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">신사동 591-13번지 -1층<br/>전용 66평<br/>보증금 5000만원 / 월세 370만원 / 관리비 50만원<br/>04년09월 준공<br/>첫 광고 등록일: 24.03.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_01345cf842b3584197301078cb4b22f7 = L.marker(
+                [37.52168031059071, 127.02880570954346],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_caaf218cf0eaad26f2ef37b758a1c70d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.6", "textColor": "white"}
+            )
+            marker_01345cf842b3584197301078cb4b22f7.setIcon(beautify_icon_caaf218cf0eaad26f2ef37b758a1c70d);
+        
+    
+        var popup_e91394776bef52dc688ab20b939c90c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0cb770168abb4a6cd5970ddef8ed411e = $(`<div id="html_0cb770168abb4a6cd5970ddef8ed411e" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2451036009' target='_blank'>신사동 591-13번지 -1층</a><br/>전용 68평<br/>보증금 5000만원 / 월세 380만원 / 관리비 70만원<br/>NOC 6.6<br/>자주식7대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/신사동 591-13번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-6820&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_e91394776bef52dc688ab20b939c90c9.setContent(html_0cb770168abb4a6cd5970ddef8ed411e);
+            
+        
+
+        marker_01345cf842b3584197301078cb4b22f7.bindPopup(popup_e91394776bef52dc688ab20b939c90c9)
+        ;
+
+        
+    
+    
+            marker_01345cf842b3584197301078cb4b22f7.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">신사동 591-13번지 -1층<br/>전용 68평<br/>보증금 5000만원 / 월세 380만원 / 관리비 70만원<br/>04년09월 준공<br/>첫 광고 등록일: 24.03.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6656cbfaaa568673fac5ddca8fec3f61 = L.marker(
+                [37.521693020993524, 127.02881794120506],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_cbee9634bb4b3f32a79e81c52c9b9e35 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.1", "textColor": "white"}
+            )
+            marker_6656cbfaaa568673fac5ddca8fec3f61.setIcon(beautify_icon_cbee9634bb4b3f32a79e81c52c9b9e35);
+        
+    
+        var popup_795a2e4e74fcaca7dc68f75120708d97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8df700ffcc80b71e30f7aae3df7a8037 = $(`<div id="html_8df700ffcc80b71e30f7aae3df7a8037" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2451036009' target='_blank'>신사동 591-13번지 -1층</a><br/>전용 63평<br/>보증금 5000만원 / 월세 450만원 / 관리비 0만원<br/>NOC 7.1<br/>자주식7대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/신사동 591-13번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-6820&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_795a2e4e74fcaca7dc68f75120708d97.setContent(html_8df700ffcc80b71e30f7aae3df7a8037);
+            
+        
+
+        marker_6656cbfaaa568673fac5ddca8fec3f61.bindPopup(popup_795a2e4e74fcaca7dc68f75120708d97)
+        ;
+
+        
+    
+    
+            marker_6656cbfaaa568673fac5ddca8fec3f61.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">신사동 591-13번지 -1층<br/>전용 63평<br/>보증금 5000만원 / 월세 450만원 / 관리비 0만원<br/>04년09월 준공<br/>첫 광고 등록일: 24.03.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c99f64056c6c45c6f7d304c96f507bf0 = L.marker(
+                [37.514550284186, 127.01796290953],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_e27f68897fe552a3791dc8dc1cac1231 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.0", "textColor": "white"}
+            )
+            marker_c99f64056c6c45c6f7d304c96f507bf0.setIcon(beautify_icon_e27f68897fe552a3791dc8dc1cac1231);
+        
+    
+        var popup_83984ad0ab3ba4efb5c57b3555f567ff = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd0e17d576e2128863b7a7179e5229c8 = $(`<div id="html_cd0e17d576e2128863b7a7179e5229c8" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450930889' target='_blank'>잠원동 22-4번지 -1층</a><br/>전용 50평<br/>보증금 3000만원 / 월세 350만원 / 관리비 0만원<br/>NOC 7.0<br/>자주식6대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/잠원동 22-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-11291&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_83984ad0ab3ba4efb5c57b3555f567ff.setContent(html_cd0e17d576e2128863b7a7179e5229c8);
+            
+        
+
+        marker_c99f64056c6c45c6f7d304c96f507bf0.bindPopup(popup_83984ad0ab3ba4efb5c57b3555f567ff)
+        ;
+
+        
+    
+    
+            marker_c99f64056c6c45c6f7d304c96f507bf0.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">잠원동 22-4번지 -1층<br/>전용 50평<br/>보증금 3000만원 / 월세 350만원 / 관리비 0만원<br/>03년07월 준공<br/>첫 광고 등록일: 23.10.04</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e351257772c45bb4858bb18df4234c65 = L.marker(
+                [37.5487033719725, 127.048844274488],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_d9e8535ba7ff9f9371e076e0e4859fec = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "11.2", "textColor": "white"}
+            )
+            marker_e351257772c45bb4858bb18df4234c65.setIcon(beautify_icon_d9e8535ba7ff9f9371e076e0e4859fec);
+        
+    
+        var popup_b94ba75a91e84f44b296603ea617b813 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2b17226df3d6dcbe055214d58ed6fee0 = $(`<div id="html_2b17226df3d6dcbe055214d58ed6fee0" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2451232048' target='_blank'>성수동1가 13-191번지 -1층</a><br/>전용 49평<br/>보증금 5000만원 / 월세 500만원 / 관리비 50만원<br/>NOC 11.2<br/>자주식5대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/성수동1가 13-191번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11200-17351&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_b94ba75a91e84f44b296603ea617b813.setContent(html_2b17226df3d6dcbe055214d58ed6fee0);
+            
+        
+
+        marker_e351257772c45bb4858bb18df4234c65.bindPopup(popup_b94ba75a91e84f44b296603ea617b813)
+        ;
+
+        
+    
+    
+            marker_e351257772c45bb4858bb18df4234c65.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">성수동1가 13-191번지 -1층<br/>전용 49평<br/>보증금 5000만원 / 월세 500만원 / 관리비 50만원<br/>92년01월 준공<br/>첫 광고 등록일: 23.07.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_666f5ab1126fc5fcbb9c9845c3a5423c = L.marker(
+                [37.4887373115444, 127.016490966107],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_40bdcaba996cb9449305a52729400ee8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.8", "textColor": "white"}
+            )
+            marker_666f5ab1126fc5fcbb9c9845c3a5423c.setIcon(beautify_icon_40bdcaba996cb9449305a52729400ee8);
+        
+    
+        var popup_e9f9e458129075586a974588831e5a37 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bdcc34220d81cf4a72eebcd2dbee1123 = $(`<div id="html_bdcc34220d81cf4a72eebcd2dbee1123" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2451677153' target='_blank'>서초동 1626-4번지 -1층</a><br/>전용 59평<br/>보증금 5000만원 / 월세 300만원 / 관리비 40만원<br/>NOC 5.8<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서초동 1626-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-16446&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_e9f9e458129075586a974588831e5a37.setContent(html_bdcc34220d81cf4a72eebcd2dbee1123);
+            
+        
+
+        marker_666f5ab1126fc5fcbb9c9845c3a5423c.bindPopup(popup_e9f9e458129075586a974588831e5a37)
+        ;
+
+        
+    
+    
+            marker_666f5ab1126fc5fcbb9c9845c3a5423c.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1626-4번지 -1층<br/>전용 59평<br/>보증금 5000만원 / 월세 300만원 / 관리비 40만원<br/>80년02월 준공<br/>첫 광고 등록일: 23.08.04</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fb168b704d89e414ad8d5db2f4784fb1 = L.marker(
+                [37.5157129950721, 127.021413257778],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_985ad786c4e748b98a66f834d1d6c37b = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "8.7", "textColor": "white"}
+            )
+            marker_fb168b704d89e414ad8d5db2f4784fb1.setIcon(beautify_icon_985ad786c4e748b98a66f834d1d6c37b);
+        
+    
+        var popup_b6e3eb530edd2adf5c9b0d6a1490357d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b5a6ac8b185f91a8c4df158936de8f59 = $(`<div id="html_b5a6ac8b185f91a8c4df158936de8f59" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452117242' target='_blank'>논현동 2-9번지 -2층</a><br/>전용 78평<br/>보증금 6000만원 / 월세 680만원 / 관리비 0만원<br/>NOC 8.7<br/>자주식14대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 2-9번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-14093&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_b6e3eb530edd2adf5c9b0d6a1490357d.setContent(html_b5a6ac8b185f91a8c4df158936de8f59);
+            
+        
+
+        marker_fb168b704d89e414ad8d5db2f4784fb1.bindPopup(popup_b6e3eb530edd2adf5c9b0d6a1490357d)
+        ;
+
+        
+    
+    
+            marker_fb168b704d89e414ad8d5db2f4784fb1.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 2-9번지 -2층<br/>전용 78평<br/>보증금 6000만원 / 월세 680만원 / 관리비 0만원<br/>94년08월 준공<br/>첫 광고 등록일: 24.03.29</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7fec57bcab77ffd2f9425b7d95c82466 = L.marker(
+                [37.4857421346296, 127.021286657565],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_c8fbfecda8813466749a52a6aba1d907 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "3.7", "textColor": "white"}
+            )
+            marker_7fec57bcab77ffd2f9425b7d95c82466.setIcon(beautify_icon_c8fbfecda8813466749a52a6aba1d907);
+        
+    
+        var popup_c37079cbbbee178c2510f44b26dfd4a6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de2e1ff22fd13831279ac3b3d5e52e6a = $(`<div id="html_de2e1ff22fd13831279ac3b3d5e52e6a" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452007480' target='_blank'>서초동 1443-33번지 -1층</a><br/>전용 82평<br/>보증금 3000만원 / 월세 300만원 / 관리비 0만원<br/>NOC 3.7<br/>자주식5대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서초동 1443-33번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-14856&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_c37079cbbbee178c2510f44b26dfd4a6.setContent(html_de2e1ff22fd13831279ac3b3d5e52e6a);
+            
+        
+
+        marker_7fec57bcab77ffd2f9425b7d95c82466.bindPopup(popup_c37079cbbbee178c2510f44b26dfd4a6)
+        ;
+
+        
+    
+    
+            marker_7fec57bcab77ffd2f9425b7d95c82466.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1443-33번지 -1층<br/>전용 82평<br/>보증금 3000만원 / 월세 300만원 / 관리비 0만원<br/>90년07월 준공<br/>첫 광고 등록일: 24.08.27</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c11300163be0a1b459aa2978d6f0419a = L.marker(
+                [37.5069627375286, 127.031712369547],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_c39bfba24d82957da8c43dfb728ca6eb = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.5", "textColor": "white"}
+            )
+            marker_c11300163be0a1b459aa2978d6f0419a.setIcon(beautify_icon_c39bfba24d82957da8c43dfb728ca6eb);
+        
+    
+        var popup_5da2344ca142367acde79f479e560908 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9ffc58fa09edda23dcd9862be3cf58ee = $(`<div id="html_9ffc58fa09edda23dcd9862be3cf58ee" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452289474' target='_blank'>논현동 206-17번지 -1층</a><br/>전용 54평<br/>보증금 5000만원 / 월세 230만원 / 관리비 120만원<br/>NOC 6.5<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 206-17번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-18566&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_5da2344ca142367acde79f479e560908.setContent(html_9ffc58fa09edda23dcd9862be3cf58ee);
+            
+        
+
+        marker_c11300163be0a1b459aa2978d6f0419a.bindPopup(popup_5da2344ca142367acde79f479e560908)
+        ;
+
+        
+    
+    
+            marker_c11300163be0a1b459aa2978d6f0419a.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 206-17번지 -1층<br/>전용 54평<br/>보증금 5000만원 / 월세 230만원 / 관리비 120만원<br/>92년06월 준공<br/>첫 광고 등록일: 23.07.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6a419e1814e2cd2ae85b6a00b9251c4 = L.marker(
+                [37.50694222177899, 127.03172578084398],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_4bb4445acde784735bd21c98bc2c6119 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.3", "textColor": "white"}
+            )
+            marker_b6a419e1814e2cd2ae85b6a00b9251c4.setIcon(beautify_icon_4bb4445acde784735bd21c98bc2c6119);
+        
+    
+        var popup_47fdc60ce9b5cc669c7e7471cd53ce1f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1b7b1d4e2daa332c993029e0bd3aa318 = $(`<div id="html_1b7b1d4e2daa332c993029e0bd3aa318" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=9000,9000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452289474' target='_blank'>논현동 206-17번지 -1층</a><br/>전용 90평<br/>보증금 9000만원 / 월세 376만원 / 관리비 194만원<br/>NOC 6.3<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 206-17번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-18566&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_47fdc60ce9b5cc669c7e7471cd53ce1f.setContent(html_1b7b1d4e2daa332c993029e0bd3aa318);
+            
+        
+
+        marker_b6a419e1814e2cd2ae85b6a00b9251c4.bindPopup(popup_47fdc60ce9b5cc669c7e7471cd53ce1f)
+        ;
+
+        
+    
+    
+            marker_b6a419e1814e2cd2ae85b6a00b9251c4.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 206-17번지 -1층<br/>전용 90평<br/>보증금 9000만원 / 월세 376만원 / 관리비 194만원<br/>92년06월 준공<br/>첫 광고 등록일: 23.07.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_82dd21a898a7d51302ff5e69125c6baf = L.marker(
+                [37.5181144271777, 127.043445731911],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_7887ef2e792515f6fae002160b27dd14 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "8.8", "textColor": "white"}
+            )
+            marker_82dd21a898a7d51302ff5e69125c6baf.setIcon(beautify_icon_7887ef2e792515f6fae002160b27dd14);
+        
+    
+        var popup_f91b6a2d719d2a42104659f60ba01008 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ccdb5bb4b763ec501a9e27a6238b87fa = $(`<div id="html_ccdb5bb4b763ec501a9e27a6238b87fa" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=8000,8000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452296998' target='_blank'>청담동 42-2번지 -2층</a><br/>전용 51평<br/>보증금 8000만원 / 월세 400만원 / 관리비 50만원<br/>NOC 8.8<br/>자주식4대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 42-2번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-18859&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_f91b6a2d719d2a42104659f60ba01008.setContent(html_ccdb5bb4b763ec501a9e27a6238b87fa);
+            
+        
+
+        marker_82dd21a898a7d51302ff5e69125c6baf.bindPopup(popup_f91b6a2d719d2a42104659f60ba01008)
+        ;
+
+        
+    
+    
+            marker_82dd21a898a7d51302ff5e69125c6baf.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 42-2번지 -2층<br/>전용 51평<br/>보증금 8000만원 / 월세 400만원 / 관리비 50만원<br/>07년12월 준공<br/>첫 광고 등록일: 23.07.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e2f4f7e40fd907838c7047792a40c1aa = L.marker(
+                [37.515306469526, 127.031783541219],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_c7a374c69fcd3343b9c5e90a237b0507 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.2", "textColor": "white"}
+            )
+            marker_e2f4f7e40fd907838c7047792a40c1aa.setIcon(beautify_icon_c7a374c69fcd3343b9c5e90a237b0507);
+        
+    
+        var popup_e8103fbf5514005e3a75d6fafdf3ecb8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bcf358819a3bd45180f92d48db7cac4e = $(`<div id="html_bcf358819a3bd45180f92d48db7cac4e" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=8000,8000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452388289' target='_blank'>논현동 86-4번지 -1층</a><br/>전용 83평<br/>보증금 8000만원 / 월세 420만원 / 관리비 180만원<br/>NOC 7.2<br/>자주식14대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 86-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-12217&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_e8103fbf5514005e3a75d6fafdf3ecb8.setContent(html_bcf358819a3bd45180f92d48db7cac4e);
+            
+        
+
+        marker_e2f4f7e40fd907838c7047792a40c1aa.bindPopup(popup_e8103fbf5514005e3a75d6fafdf3ecb8)
+        ;
+
+        
+    
+    
+            marker_e2f4f7e40fd907838c7047792a40c1aa.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 86-4번지 -1층<br/>전용 83평<br/>보증금 8000만원 / 월세 420만원 / 관리비 180만원<br/>93년10월 준공<br/>첫 광고 등록일: 23.11.01</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b5c8733e4f87c849225ce75647561a8b = L.marker(
+                [37.5213609136898, 127.03908348656],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_5b1bf6ca57233b84f6acd0c01fdbfeb8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "10.8", "textColor": "white"}
+            )
+            marker_b5c8733e4f87c849225ce75647561a8b.setIcon(beautify_icon_5b1bf6ca57233b84f6acd0c01fdbfeb8);
+        
+    
+        var popup_49733e8353a9f5215620d3994df368c0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5e1f948862aa89184b4a5d39a6d42ac6 = $(`<div id="html_5e1f948862aa89184b4a5d39a6d42ac6" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=8000,8000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452486026' target='_blank'>논현동 101-12번지 -1층</a><br/>전용 65평<br/>보증금 8000만원 / 월세 700만원 / 관리비 0만원<br/>NOC 10.8<br/>자주식0대 / 기계식12대<br/><a href='https://map.naver.com/v5/search/논현동 101-12번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-3841&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_49733e8353a9f5215620d3994df368c0.setContent(html_5e1f948862aa89184b4a5d39a6d42ac6);
+            
+        
+
+        marker_b5c8733e4f87c849225ce75647561a8b.bindPopup(popup_49733e8353a9f5215620d3994df368c0)
+        ;
+
+        
+    
+    
+            marker_b5c8733e4f87c849225ce75647561a8b.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 101-12번지 -1층<br/>전용 65평<br/>보증금 8000만원 / 월세 700만원 / 관리비 0만원<br/>90년08월 준공<br/>첫 광고 등록일: 23.10.07</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3813f97cdc3d9fd91985f5f736ca5a9f = L.marker(
+                [37.52135490658511, 127.03911130062242],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_c16661fd9b80e54db23e5da3d08410a9 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "13.0", "textColor": "white"}
+            )
+            marker_3813f97cdc3d9fd91985f5f736ca5a9f.setIcon(beautify_icon_c16661fd9b80e54db23e5da3d08410a9);
+        
+    
+        var popup_931c8e3a380b824e4a42bfa5a89f13c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d5f781f934dc74099df39e40b2ec57e1 = $(`<div id="html_d5f781f934dc74099df39e40b2ec57e1" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=8000,8000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452486026' target='_blank'>논현동 101-12번지 -1층</a><br/>전용 69평<br/>보증금 8000만원 / 월세 800만원 / 관리비 100만원<br/>NOC 13.0<br/>자주식0대 / 기계식12대<br/><a href='https://map.naver.com/v5/search/논현동 101-12번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-3841&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_931c8e3a380b824e4a42bfa5a89f13c9.setContent(html_d5f781f934dc74099df39e40b2ec57e1);
+            
+        
+
+        marker_3813f97cdc3d9fd91985f5f736ca5a9f.bindPopup(popup_931c8e3a380b824e4a42bfa5a89f13c9)
+        ;
+
+        
+    
+    
+            marker_3813f97cdc3d9fd91985f5f736ca5a9f.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 101-12번지 -1층<br/>전용 69평<br/>보증금 8000만원 / 월세 800만원 / 관리비 100만원<br/>90년08월 준공<br/>첫 광고 등록일: 23.10.07</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8e5c732a6aa17b6478a0f031ea579f1d = L.marker(
+                [37.5257331209895, 127.047663053127],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_6a059a24af89ba858e554b4cead22fb0 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#87CEEB", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "18.0", "textColor": "white"}
+            )
+            marker_8e5c732a6aa17b6478a0f031ea579f1d.setIcon(beautify_icon_6a059a24af89ba858e554b4cead22fb0);
+        
+    
+        var popup_9fa855ce35e96413935978abc23c5e13 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c1dad1696593c2e21c2213e93db3114b = $(`<div id="html_c1dad1696593c2e21c2213e93db3114b" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=15000,15000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452832042' target='_blank'>청담동 117-9번지 -1층</a><br/>전용 50평<br/>보증금 15000만원 / 월세 900만원 / 관리비 0만원<br/>NOC 18.0<br/>자주식3대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/청담동 117-9번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-15695&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_9fa855ce35e96413935978abc23c5e13.setContent(html_c1dad1696593c2e21c2213e93db3114b);
+            
+        
+
+        marker_8e5c732a6aa17b6478a0f031ea579f1d.bindPopup(popup_9fa855ce35e96413935978abc23c5e13)
+        ;
+
+        
+    
+    
+            marker_8e5c732a6aa17b6478a0f031ea579f1d.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">청담동 117-9번지 -1층<br/>전용 50평<br/>보증금 15000만원 / 월세 900만원 / 관리비 0만원<br/>01년12월 준공<br/>첫 광고 등록일: 23.11.15</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_84d120222755bb00e786d75026331bd7 = L.marker(
+                [37.4864591208762, 127.029430783468],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_1bebcbe22aebb26438c8ec8c065575be = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.7", "textColor": "white"}
+            )
+            marker_84d120222755bb00e786d75026331bd7.setIcon(beautify_icon_1bebcbe22aebb26438c8ec8c065575be);
+        
+    
+        var popup_00c441287123d5537dc35bee7525b9b1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f0d1c985c51fd8ea1c771350aa83aaac = $(`<div id="html_f0d1c985c51fd8ea1c771350aa83aaac" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=8000,8000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452527193' target='_blank'>서초동 1359-35번지 -1층</a><br/>전용 87평<br/>보증금 8000만원 / 월세 410만원 / 관리비 90만원<br/>NOC 5.7<br/>자주식5대 / 기계식14대<br/><a href='https://map.naver.com/v5/search/서초동 1359-35번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-14546&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_00c441287123d5537dc35bee7525b9b1.setContent(html_f0d1c985c51fd8ea1c771350aa83aaac);
+            
+        
+
+        marker_84d120222755bb00e786d75026331bd7.bindPopup(popup_00c441287123d5537dc35bee7525b9b1)
+        ;
+
+        
+    
+    
+            marker_84d120222755bb00e786d75026331bd7.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1359-35번지 -1층<br/>전용 87평<br/>보증금 8000만원 / 월세 410만원 / 관리비 90만원<br/>03년11월 준공<br/>첫 광고 등록일: 23.09.13</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d88778e42fb00bf88f92c780135c89aa = L.marker(
+                [37.5097095569765, 127.03198656527],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_c88c73e2f7ff3fce678a759d329d4aeb = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "8.3", "textColor": "white"}
+            )
+            marker_d88778e42fb00bf88f92c780135c89aa.setIcon(beautify_icon_c88c73e2f7ff3fce678a759d329d4aeb);
+        
+    
+        var popup_c09706ed161af761d96da09d4f36cfdb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d19bd46ded46f91ed682742fbb030ed5 = $(`<div id="html_d19bd46ded46f91ed682742fbb030ed5" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452836388' target='_blank'>논현동 175-8번지 -1층</a><br/>전용 84평<br/>보증금 6000만원 / 월세 600만원 / 관리비 100만원<br/>NOC 8.3<br/>자주식10대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 175-8번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-7860&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_c09706ed161af761d96da09d4f36cfdb.setContent(html_d19bd46ded46f91ed682742fbb030ed5);
+            
+        
+
+        marker_d88778e42fb00bf88f92c780135c89aa.bindPopup(popup_c09706ed161af761d96da09d4f36cfdb)
+        ;
+
+        
+    
+    
+            marker_d88778e42fb00bf88f92c780135c89aa.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 175-8번지 -1층<br/>전용 84평<br/>보증금 6000만원 / 월세 600만원 / 관리비 100만원<br/>06년06월 준공<br/>첫 광고 등록일: 24.08.23</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3aa9fa6516559925444a586490ae2eee = L.marker(
+                [37.50547342298, 127.026392633481],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_3f6c83947d024e9dc956182e1143863d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#87CEEB", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "16.1", "textColor": "white"}
+            )
+            marker_3aa9fa6516559925444a586490ae2eee.setIcon(beautify_icon_3f6c83947d024e9dc956182e1143863d);
+        
+    
+        var popup_1240582834013c5d486522d561c49ff9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cf3a8adb124e4c713e29a43d8d13f114 = $(`<div id="html_cf3a8adb124e4c713e29a43d8d13f114" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453093886' target='_blank'>논현동 202-18번지 -1층</a><br/>전용 59평<br/>보증금 10000만원 / 월세 900만원 / 관리비 50만원<br/>NOC 16.1<br/>자주식4대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 202-18번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-15276&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_1240582834013c5d486522d561c49ff9.setContent(html_cf3a8adb124e4c713e29a43d8d13f114);
+            
+        
+
+        marker_3aa9fa6516559925444a586490ae2eee.bindPopup(popup_1240582834013c5d486522d561c49ff9)
+        ;
+
+        
+    
+    
+            marker_3aa9fa6516559925444a586490ae2eee.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 202-18번지 -1층<br/>전용 59평<br/>보증금 10000만원 / 월세 900만원 / 관리비 50만원<br/>97년11월 준공<br/>첫 광고 등록일: 24.06.15</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_331e25cc246d1b5600458d09dfaa7f90 = L.marker(
+                [37.50383365498, 127.037775786723],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_e8437df07b06daf384a9cac1aa756a60 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.2", "textColor": "white"}
+            )
+            marker_331e25cc246d1b5600458d09dfaa7f90.setIcon(beautify_icon_e8437df07b06daf384a9cac1aa756a60);
+        
+    
+        var popup_3010038e456072e078a060602804c09f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c9568f3aeba9ec7375f2a500350757b8 = $(`<div id="html_c9568f3aeba9ec7375f2a500350757b8" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453070543' target='_blank'>역삼동 670-5번지 -1층</a><br/>전용 53평<br/>보증금 6000만원 / 월세 430만원 / 관리비 56만원<br/>NOC 9.2<br/>자주식6대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/역삼동 670-5번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-11057&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_3010038e456072e078a060602804c09f.setContent(html_c9568f3aeba9ec7375f2a500350757b8);
+            
+        
+
+        marker_331e25cc246d1b5600458d09dfaa7f90.bindPopup(popup_3010038e456072e078a060602804c09f)
+        ;
+
+        
+    
+    
+            marker_331e25cc246d1b5600458d09dfaa7f90.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">역삼동 670-5번지 -1층<br/>전용 53평<br/>보증금 6000만원 / 월세 430만원 / 관리비 56만원<br/>92년07월 준공<br/>첫 광고 등록일: 23.07.25</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_83f40f35c98d4bb614326cc07d040d32 = L.marker(
+                [37.5188836735311, 127.029547242861],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_58361bbe79b5ce3c32737942a41609f5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.1", "textColor": "white"}
+            )
+            marker_83f40f35c98d4bb614326cc07d040d32.setIcon(beautify_icon_58361bbe79b5ce3c32737942a41609f5);
+        
+    
+        var popup_50e1af1dde1f4bd7c5b7e1299b98bfa2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ba1a14f50a8afe1075f4216592e07362 = $(`<div id="html_ba1a14f50a8afe1075f4216592e07362" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453901072' target='_blank'>논현동 66-6번지 -1층</a><br/>전용 63평<br/>보증금 5000만원 / 월세 400만원 / 관리비 50만원<br/>NOC 7.1<br/>자주식5대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/논현동 66-6번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11680-13124&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_50e1af1dde1f4bd7c5b7e1299b98bfa2.setContent(html_ba1a14f50a8afe1075f4216592e07362);
+            
+        
+
+        marker_83f40f35c98d4bb614326cc07d040d32.bindPopup(popup_50e1af1dde1f4bd7c5b7e1299b98bfa2)
+        ;
+
+        
+    
+    
+            marker_83f40f35c98d4bb614326cc07d040d32.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">논현동 66-6번지 -1층<br/>전용 63평<br/>보증금 5000만원 / 월세 400만원 / 관리비 50만원<br/>91년02월 준공<br/>첫 광고 등록일: 24.01.24</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a3ececa24139af7322738be4386adb8b = L.marker(
+                [37.4885914259859, 127.030921801372],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_c1e73fcccaec0c42355eb97a824e02f3 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.9", "textColor": "white"}
+            )
+            marker_a3ececa24139af7322738be4386adb8b.setIcon(beautify_icon_c1e73fcccaec0c42355eb97a824e02f3);
+        
+    
+        var popup_5922267e43c18bdd76f967ec1f43d864 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cef8b4a6683b50f0365ac62163870271 = $(`<div id="html_cef8b4a6683b50f0365ac62163870271" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453692924' target='_blank'>서초동 1357-6번지 -1층</a><br/>전용 59평<br/>보증금 3000만원 / 월세 300만원 / 관리비 50만원<br/>NOC 5.9<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서초동 1357-6번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-14475&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_5922267e43c18bdd76f967ec1f43d864.setContent(html_cef8b4a6683b50f0365ac62163870271);
+            
+        
+
+        marker_a3ececa24139af7322738be4386adb8b.bindPopup(popup_5922267e43c18bdd76f967ec1f43d864)
+        ;
+
+        
+    
+    
+            marker_a3ececa24139af7322738be4386adb8b.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1357-6번지 -1층<br/>전용 59평<br/>보증금 3000만원 / 월세 300만원 / 관리비 50만원<br/>90년08월 준공<br/>첫 광고 등록일: 24.04.17</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_369c5ec653b5a3e2ad24e44ab2b754e6 = L.marker(
+                [37.4885710730282, 127.03089939971004],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_3f0d2566d40b3a1eff6986ed4b8c9dc8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.8", "textColor": "white"}
+            )
+            marker_369c5ec653b5a3e2ad24e44ab2b754e6.setIcon(beautify_icon_3f0d2566d40b3a1eff6986ed4b8c9dc8);
+        
+    
+        var popup_81c982128674c5cc17656fe4759d711b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ca11970587a4fd028eee1ce0680fef10 = $(`<div id="html_ca11970587a4fd028eee1ce0680fef10" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453692924' target='_blank'>서초동 1357-6번지 -1층</a><br/>전용 56평<br/>보증금 3000만원 / 월세 350만원 / 관리비 90만원<br/>NOC 7.8<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서초동 1357-6번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-14475&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_81c982128674c5cc17656fe4759d711b.setContent(html_ca11970587a4fd028eee1ce0680fef10);
+            
+        
+
+        marker_369c5ec653b5a3e2ad24e44ab2b754e6.bindPopup(popup_81c982128674c5cc17656fe4759d711b)
+        ;
+
+        
+    
+    
+            marker_369c5ec653b5a3e2ad24e44ab2b754e6.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1357-6번지 -1층<br/>전용 56평<br/>보증금 3000만원 / 월세 350만원 / 관리비 90만원<br/>90년08월 준공<br/>첫 광고 등록일: 24.04.17</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_23312dbc7b05bc61ce0a958fa2d13b94 = L.marker(
+                [37.4931794429543, 127.015949501159],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_88529e8774a40b3f76542d62762f1fd0 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.1", "textColor": "white"}
+            )
+            marker_23312dbc7b05bc61ce0a958fa2d13b94.setIcon(beautify_icon_88529e8774a40b3f76542d62762f1fd0);
+        
+    
+        var popup_9071c0aed2e2f5665c103baba773847d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d8114e644eec084749afc05c820d0517 = $(`<div id="html_d8114e644eec084749afc05c820d0517" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453828513' target='_blank'>서초동 1659-13번지 -1층</a><br/>전용 52평<br/>보증금 5000만원 / 월세 350만원 / 관리비 125만원<br/>NOC 9.1<br/>자주식5대 / 기계식12대<br/><a href='https://map.naver.com/v5/search/서초동 1659-13번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-18118&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_9071c0aed2e2f5665c103baba773847d.setContent(html_d8114e644eec084749afc05c820d0517);
+            
+        
+
+        marker_23312dbc7b05bc61ce0a958fa2d13b94.bindPopup(popup_9071c0aed2e2f5665c103baba773847d)
+        ;
+
+        
+    
+    
+            marker_23312dbc7b05bc61ce0a958fa2d13b94.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1659-13번지 -1층<br/>전용 52평<br/>보증금 5000만원 / 월세 350만원 / 관리비 125만원<br/>05년02월 준공<br/>첫 광고 등록일: 23.07.31</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1e222ba5aec75469909814e356d3aad = L.marker(
+                [37.49320390271623, 127.0159407124941],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_6fb6c2dee86a5c136dfa66e739f86120 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.1", "textColor": "white"}
+            )
+            marker_c1e222ba5aec75469909814e356d3aad.setIcon(beautify_icon_6fb6c2dee86a5c136dfa66e739f86120);
+        
+    
+        var popup_f5fe5e249b50272ac38c87b7b905d1c2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2610741b91ee124bb08d59e38df71cbd = $(`<div id="html_2610741b91ee124bb08d59e38df71cbd" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453828513' target='_blank'>서초동 1659-13번지 -1층</a><br/>전용 52평<br/>보증금 5000만원 / 월세 385만원 / 관리비 90만원<br/>NOC 9.1<br/>자주식5대 / 기계식12대<br/><a href='https://map.naver.com/v5/search/서초동 1659-13번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-18118&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_f5fe5e249b50272ac38c87b7b905d1c2.setContent(html_2610741b91ee124bb08d59e38df71cbd);
+            
+        
+
+        marker_c1e222ba5aec75469909814e356d3aad.bindPopup(popup_f5fe5e249b50272ac38c87b7b905d1c2)
+        ;
+
+        
+    
+    
+            marker_c1e222ba5aec75469909814e356d3aad.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1659-13번지 -1층<br/>전용 52평<br/>보증금 5000만원 / 월세 385만원 / 관리비 90만원<br/>05년02월 준공<br/>첫 광고 등록일: 23.07.31</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_64f73b181b25e7b9adb0055ad871fe33 = L.marker(
+                [37.4836470212212, 127.01058785592],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_47b0cdb47489a083e179273c847018ca = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "3.8", "textColor": "green"}
+            )
+            marker_64f73b181b25e7b9adb0055ad871fe33.setIcon(beautify_icon_47b0cdb47489a083e179273c847018ca);
+        
+    
+        var popup_84eda164f87c55b6297e2cdd0a887f58 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_939f8c26767c2af92733dbe1773de5dd = $(`<div id="html_939f8c26767c2af92733dbe1773de5dd" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453750757' target='_blank'>서초동 1460-1번지 -1층</a><br/>전용 83평<br/>보증금 5000만원 / 월세 250만원 / 관리비 63만원<br/>NOC 3.8<br/>자주식13대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서초동 1460-1번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-14974&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_84eda164f87c55b6297e2cdd0a887f58.setContent(html_939f8c26767c2af92733dbe1773de5dd);
+            
+        
+
+        marker_64f73b181b25e7b9adb0055ad871fe33.bindPopup(popup_84eda164f87c55b6297e2cdd0a887f58)
+        ;
+
+        
+    
+    
+            marker_64f73b181b25e7b9adb0055ad871fe33.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1460-1번지 -1층<br/>전용 83평<br/>보증금 5000만원 / 월세 250만원 / 관리비 63만원<br/>91년05월 준공<br/>첫 광고 등록일: 24.10.22</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b03597848e0c6038a8eab923f25794c7 = L.marker(
+                [37.48364987724373, 127.01063499005097],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_0bc5f149985e7fadccfa4a3c646966f2 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "4.1", "textColor": "green"}
+            )
+            marker_b03597848e0c6038a8eab923f25794c7.setIcon(beautify_icon_0bc5f149985e7fadccfa4a3c646966f2);
+        
+    
+        var popup_af445f75ddab828f8127b73d7b01f951 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4a2b0022213dc420fb7fc61f6d77f960 = $(`<div id="html_4a2b0022213dc420fb7fc61f6d77f960" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453750757' target='_blank'>서초동 1460-1번지 -1층</a><br/>전용 84평<br/>보증금 5000만원 / 월세 280만원 / 관리비 63만원<br/>NOC 4.1<br/>자주식13대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서초동 1460-1번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11650-14974&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_af445f75ddab828f8127b73d7b01f951.setContent(html_4a2b0022213dc420fb7fc61f6d77f960);
+            
+        
+
+        marker_b03597848e0c6038a8eab923f25794c7.bindPopup(popup_af445f75ddab828f8127b73d7b01f951)
+        ;
+
+        
+    
+    
+            marker_b03597848e0c6038a8eab923f25794c7.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서초동 1460-1번지 -1층<br/>전용 84평<br/>보증금 5000만원 / 월세 280만원 / 관리비 63만원<br/>91년05월 준공<br/>첫 광고 등록일: 24.10.22</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21d8b94f2418215b02aaf7ab11425a8d = L.marker(
+                [37.5569049080498, 126.920656240783],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_82414f15d72c8ec95cc85647db6033eb = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.4", "textColor": "white"}
+            )
+            marker_21d8b94f2418215b02aaf7ab11425a8d.setIcon(beautify_icon_82414f15d72c8ec95cc85647db6033eb);
+        
+    
+        var popup_4cdfbabfdfb4f99e927718ea8e938a23 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83dd8f4eafa2f790fb16bd449eddd94c = $(`<div id="html_83dd8f4eafa2f790fb16bd449eddd94c" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2449164466' target='_blank'>동교동 201-14번지 -1층</a><br/>전용 77평<br/>보증금 6000만원 / 월세 570만원 / 관리비 0만원<br/>NOC 7.4<br/>자주식2대 / 기계식9대<br/><a href='https://map.naver.com/v5/search/동교동 201-14번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-100212729&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_4cdfbabfdfb4f99e927718ea8e938a23.setContent(html_83dd8f4eafa2f790fb16bd449eddd94c);
+            
+        
+
+        marker_21d8b94f2418215b02aaf7ab11425a8d.bindPopup(popup_4cdfbabfdfb4f99e927718ea8e938a23)
+        ;
+
+        
+    
+    
+            marker_21d8b94f2418215b02aaf7ab11425a8d.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">동교동 201-14번지 -1층<br/>전용 77평<br/>보증금 6000만원 / 월세 570만원 / 관리비 0만원<br/>13년04월 준공<br/>첫 광고 등록일: 24.07.17</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aa7343ef83561ab3e118a0adf5c48776 = L.marker(
+                [37.557604880307, 126.920906297922],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_b2ed68d62a57a351c8edfcf85cf356f9 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "8.4", "textColor": "white"}
+            )
+            marker_aa7343ef83561ab3e118a0adf5c48776.setIcon(beautify_icon_b2ed68d62a57a351c8edfcf85cf356f9);
+        
+    
+        var popup_278219b4e1dcd485d438318b0a601bb6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_66a0cddd4d3e51533e90d0589ca55a42 = $(`<div id="html_66a0cddd4d3e51533e90d0589ca55a42" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2450710214' target='_blank'>동교동 203-40번지 -1층</a><br/>전용 64평<br/>보증금 5000만원 / 월세 520만원 / 관리비 20만원<br/>NOC 8.4<br/>자주식8대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/동교동 203-40번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-22481&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_278219b4e1dcd485d438318b0a601bb6.setContent(html_66a0cddd4d3e51533e90d0589ca55a42);
+            
+        
+
+        marker_aa7343ef83561ab3e118a0adf5c48776.bindPopup(popup_278219b4e1dcd485d438318b0a601bb6)
+        ;
+
+        
+    
+    
+            marker_aa7343ef83561ab3e118a0adf5c48776.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">동교동 203-40번지 -1층<br/>전용 64평<br/>보증금 5000만원 / 월세 520만원 / 관리비 20만원<br/>05년06월 준공<br/>첫 광고 등록일: 24.03.04</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_79e56dda7146ca1a448f6440a6d2516f = L.marker(
+                [37.5597381529283, 126.922372777507],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_fa6022bcad1dd6418470a5078d37dd5f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.1", "textColor": "white"}
+            )
+            marker_79e56dda7146ca1a448f6440a6d2516f.setIcon(beautify_icon_fa6022bcad1dd6418470a5078d37dd5f);
+        
+    
+        var popup_44063131e9e658e4862e6a053450f117 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2925ea4ae0fe2a7208ca225f7067785a = $(`<div id="html_2925ea4ae0fe2a7208ca225f7067785a" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=8000,8000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452144674' target='_blank'>동교동 197-14번지 -2층</a><br/>전용 65평<br/>보증금 8000만원 / 월세 400만원 / 관리비 59만원<br/>NOC 7.1<br/>자주식9대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/동교동 197-14번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-100209952&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_44063131e9e658e4862e6a053450f117.setContent(html_2925ea4ae0fe2a7208ca225f7067785a);
+            
+        
+
+        marker_79e56dda7146ca1a448f6440a6d2516f.bindPopup(popup_44063131e9e658e4862e6a053450f117)
+        ;
+
+        
+    
+    
+            marker_79e56dda7146ca1a448f6440a6d2516f.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">동교동 197-14번지 -2층<br/>전용 65평<br/>보증금 8000만원 / 월세 400만원 / 관리비 59만원<br/>12년11월 준공<br/>첫 광고 등록일: 24.05.21</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4f3b2f4600422efae4e758600a0733ea = L.marker(
+                [37.5601190614003, 126.902414265479],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_664b9b4772f16f10ae843c58c63fc7cd = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "4.3", "textColor": "white"}
+            )
+            marker_4f3b2f4600422efae4e758600a0733ea.setIcon(beautify_icon_664b9b4772f16f10ae843c58c63fc7cd);
+        
+    
+        var popup_1dfce20661a6c30d14d556db497d106a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ca980360bd2ef96aea2bc27943254cd4 = $(`<div id="html_ca980360bd2ef96aea2bc27943254cd4" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453027423' target='_blank'>망원동 436-4번지 -1층</a><br/>전용 82평<br/>보증금 5000만원 / 월세 300만원 / 관리비 50만원<br/>NOC 4.3<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/망원동 436-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-26224&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_1dfce20661a6c30d14d556db497d106a.setContent(html_ca980360bd2ef96aea2bc27943254cd4);
+            
+        
+
+        marker_4f3b2f4600422efae4e758600a0733ea.bindPopup(popup_1dfce20661a6c30d14d556db497d106a)
+        ;
+
+        
+    
+    
+            marker_4f3b2f4600422efae4e758600a0733ea.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">망원동 436-4번지 -1층<br/>전용 82평<br/>보증금 5000만원 / 월세 300만원 / 관리비 50만원<br/>92년01월 준공<br/>첫 광고 등록일: 23.11.14</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b169d29d4a3ac242075a9863f111fd81 = L.marker(
+                [37.56009599726479, 126.90242866279628],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_beac1f64908760ae04f1be1bc22a0406 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.4", "textColor": "white"}
+            )
+            marker_b169d29d4a3ac242075a9863f111fd81.setIcon(beautify_icon_beac1f64908760ae04f1be1bc22a0406);
+        
+    
+        var popup_1ec2e4306ed5809f8f85a260f69b5e46 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_214da1d7822f3688d5ec51d5c8111983 = $(`<div id="html_214da1d7822f3688d5ec51d5c8111983" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453027423' target='_blank'>망원동 436-4번지 -1층</a><br/>전용 74평<br/>보증금 5000만원 / 월세 350만원 / 관리비 50만원<br/>NOC 5.4<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/망원동 436-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-26224&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_1ec2e4306ed5809f8f85a260f69b5e46.setContent(html_214da1d7822f3688d5ec51d5c8111983);
+            
+        
+
+        marker_b169d29d4a3ac242075a9863f111fd81.bindPopup(popup_1ec2e4306ed5809f8f85a260f69b5e46)
+        ;
+
+        
+    
+    
+            marker_b169d29d4a3ac242075a9863f111fd81.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">망원동 436-4번지 -1층<br/>전용 74평<br/>보증금 5000만원 / 월세 350만원 / 관리비 50만원<br/>92년01월 준공<br/>첫 광고 등록일: 23.11.14</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7bd8cda5e757b5423ee636afbd20c9a7 = L.marker(
+                [37.56015634071896, 126.9024501975568],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_d88ebb1167a0c66da6d18cce49d4ab72 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.2", "textColor": "white"}
+            )
+            marker_7bd8cda5e757b5423ee636afbd20c9a7.setIcon(beautify_icon_d88ebb1167a0c66da6d18cce49d4ab72);
+        
+    
+        var popup_964e03c1f44d142447b15e5e3ef5569b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5c9c895d6fadd57d27a7245ca1e2be94 = $(`<div id="html_5c9c895d6fadd57d27a7245ca1e2be94" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453027423' target='_blank'>망원동 436-4번지 -1층</a><br/>전용 73평<br/>보증금 6000만원 / 월세 380만원 / 관리비 0만원<br/>NOC 5.2<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/망원동 436-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-26224&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_964e03c1f44d142447b15e5e3ef5569b.setContent(html_5c9c895d6fadd57d27a7245ca1e2be94);
+            
+        
+
+        marker_7bd8cda5e757b5423ee636afbd20c9a7.bindPopup(popup_964e03c1f44d142447b15e5e3ef5569b)
+        ;
+
+        
+    
+    
+            marker_7bd8cda5e757b5423ee636afbd20c9a7.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">망원동 436-4번지 -1층<br/>전용 73평<br/>보증금 6000만원 / 월세 380만원 / 관리비 0만원<br/>92년01월 준공<br/>첫 광고 등록일: 23.11.14</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3684d5bc8fbede63223329b2fb7d653b = L.marker(
+                [37.5756292891525, 126.9979685561],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_8e75fe1b0a80ac6a60782d479b8bc4b8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.0", "textColor": "white"}
+            )
+            marker_3684d5bc8fbede63223329b2fb7d653b.setIcon(beautify_icon_8e75fe1b0a80ac6a60782d479b8bc4b8);
+        
+    
+        var popup_743d4158aa294a02265c656488c12d81 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_45313b97252fa62e00d3f6ef575b1a7c = $(`<div id="html_45313b97252fa62e00d3f6ef575b1a7c" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=4000,4000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453107789' target='_blank'>원남동 28-7번지 -1층</a><br/>전용 80평<br/>보증금 4000만원 / 월세 400만원 / 관리비 160만원<br/>NOC 7.0<br/>자주식1대 / 기계식24대<br/><a href='https://map.naver.com/v5/search/원남동 28-7번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11110-29442&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_743d4158aa294a02265c656488c12d81.setContent(html_45313b97252fa62e00d3f6ef575b1a7c);
+            
+        
+
+        marker_3684d5bc8fbede63223329b2fb7d653b.bindPopup(popup_743d4158aa294a02265c656488c12d81)
+        ;
+
+        
+    
+    
+            marker_3684d5bc8fbede63223329b2fb7d653b.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">원남동 28-7번지 -1층<br/>전용 80평<br/>보증금 4000만원 / 월세 400만원 / 관리비 160만원<br/>05년07월 준공<br/>첫 광고 등록일: 24.05.10</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8b950da9dc3ae67aa89df0d93bf30dcb = L.marker(
+                [37.5522705849548, 126.913661341246],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_4172e78f610785a86f437a988ea74d25 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "9.4", "textColor": "green"}
+            )
+            marker_8b950da9dc3ae67aa89df0d93bf30dcb.setIcon(beautify_icon_4172e78f610785a86f437a988ea74d25);
+        
+    
+        var popup_9a1757b4cd07fe7f3c23ca5022a407c2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_79152c9536df389a21d12bce88db7b2a = $(`<div id="html_79152c9536df389a21d12bce88db7b2a" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=10000,10000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453301568' target='_blank'>서교동 384-13번지 -1층</a><br/>전용 64평<br/>보증금 10000만원 / 월세 550만원 / 관리비 50만원<br/>NOC 9.4<br/>자주식8대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서교동 384-13번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-20022&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_9a1757b4cd07fe7f3c23ca5022a407c2.setContent(html_79152c9536df389a21d12bce88db7b2a);
+            
+        
+
+        marker_8b950da9dc3ae67aa89df0d93bf30dcb.bindPopup(popup_9a1757b4cd07fe7f3c23ca5022a407c2)
+        ;
+
+        
+    
+    
+            marker_8b950da9dc3ae67aa89df0d93bf30dcb.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서교동 384-13번지 -1층<br/>전용 64평<br/>보증금 10000만원 / 월세 550만원 / 관리비 50만원<br/>03년07월 준공<br/>첫 광고 등록일: 24.09.26</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_14804336dda80a8b411ad29dd8359db4 = L.marker(
+                [37.5538441618327, 126.927429030088],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_b05737831fe8ff7e35775a1a6639b3b2 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "red", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "19.0", "textColor": "white"}
+            )
+            marker_14804336dda80a8b411ad29dd8359db4.setIcon(beautify_icon_b05737831fe8ff7e35775a1a6639b3b2);
+        
+    
+        var popup_01bdc5f12779967cd616c94278b26bf1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e4ed041465b4d025dc79801e62d5613c = $(`<div id="html_e4ed041465b4d025dc79801e62d5613c" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=15000,15000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453449590' target='_blank'>서교동 338-4번지 -2층</a><br/>전용 50평<br/>보증금 15000만원 / 월세 850만원 / 관리비 100만원<br/>NOC 19.0<br/>자주식9대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서교동 338-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-100275163&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_01bdc5f12779967cd616c94278b26bf1.setContent(html_e4ed041465b4d025dc79801e62d5613c);
+            
+        
+
+        marker_14804336dda80a8b411ad29dd8359db4.bindPopup(popup_01bdc5f12779967cd616c94278b26bf1)
+        ;
+
+        
+    
+    
+            marker_14804336dda80a8b411ad29dd8359db4.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서교동 338-4번지 -2층<br/>전용 50평<br/>보증금 15000만원 / 월세 850만원 / 관리비 100만원<br/>21년03월 준공<br/>첫 광고 등록일: 23.11.08</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dd6ab941449f912b3651d43b73975959 = L.marker(
+                [37.5524116259333, 126.914451888497],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_52f4b4dd2b3f317cca193d867ca3fee8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "8.0", "textColor": "white"}
+            )
+            marker_dd6ab941449f912b3651d43b73975959.setIcon(beautify_icon_52f4b4dd2b3f317cca193d867ca3fee8);
+        
+    
+        var popup_32bbc64d1fe5d235fef7c9f570075733 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_035670f1ba4b8b0fc1bfd3d9e3ac289b = $(`<div id="html_035670f1ba4b8b0fc1bfd3d9e3ac289b" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453679165' target='_blank'>서교동 385-16번지 -1층</a><br/>전용 60평<br/>보증금 5000만원 / 월세 450만원 / 관리비 30만원<br/>NOC 8.0<br/>자주식7대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서교동 385-16번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-100260163&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_32bbc64d1fe5d235fef7c9f570075733.setContent(html_035670f1ba4b8b0fc1bfd3d9e3ac289b);
+            
+        
+
+        marker_dd6ab941449f912b3651d43b73975959.bindPopup(popup_32bbc64d1fe5d235fef7c9f570075733)
+        ;
+
+        
+    
+    
+            marker_dd6ab941449f912b3651d43b73975959.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서교동 385-16번지 -1층<br/>전용 60평<br/>보증금 5000만원 / 월세 450만원 / 관리비 30만원<br/>18년12월 준공<br/>첫 광고 등록일: 24.08.27</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_45f8ef0a13ad62b69c6553b4fb7bda71 = L.marker(
+                [37.5545028945198, 126.918605170153],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_37718fcc63c3305e233b1d55d59d3dc1 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.6", "textColor": "white"}
+            )
+            marker_45f8ef0a13ad62b69c6553b4fb7bda71.setIcon(beautify_icon_37718fcc63c3305e233b1d55d59d3dc1);
+        
+    
+        var popup_eb5632139a9f25fdd78532bb38c16fac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24b6b99c55af84f13324139722b6e6b1 = $(`<div id="html_24b6b99c55af84f13324139722b6e6b1" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453815470' target='_blank'>서교동 375-11번지 -1층</a><br/>전용 50평<br/>보증금 3000만원 / 월세 320만원 / 관리비 60만원<br/>NOC 7.6<br/>자주식6대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/서교동 375-11번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-100217992&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_eb5632139a9f25fdd78532bb38c16fac.setContent(html_24b6b99c55af84f13324139722b6e6b1);
+            
+        
+
+        marker_45f8ef0a13ad62b69c6553b4fb7bda71.bindPopup(popup_eb5632139a9f25fdd78532bb38c16fac)
+        ;
+
+        
+    
+    
+            marker_45f8ef0a13ad62b69c6553b4fb7bda71.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">서교동 375-11번지 -1층<br/>전용 50평<br/>보증금 3000만원 / 월세 320만원 / 관리비 60만원<br/>13년12월 준공<br/>첫 광고 등록일: 24.05.10</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1e7c8628fda8ef0e6e04ee1173ffef75 = L.marker(
+                [37.5635925292767, 126.920616551263],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_289823e2cea70b3fc14a568ef3e73563 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.8", "textColor": "white"}
+            )
+            marker_1e7c8628fda8ef0e6e04ee1173ffef75.setIcon(beautify_icon_289823e2cea70b3fc14a568ef3e73563);
+        
+    
+        var popup_5ca1eb32f22a9b588fff7b7fafdcdce8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c54b499308f1b40ffb3478293bb0291e = $(`<div id="html_c54b499308f1b40ffb3478293bb0291e" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=5000,5000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453826696' target='_blank'>연남동 369-17번지 -1층</a><br/>전용 71평<br/>보증금 5000만원 / 월세 380만원 / 관리비 30만원<br/>NOC 5.8<br/>자주식1대 / 기계식18대<br/><a href='https://map.naver.com/v5/search/연남동 369-17번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11440-28545&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_5ca1eb32f22a9b588fff7b7fafdcdce8.setContent(html_c54b499308f1b40ffb3478293bb0291e);
+            
+        
+
+        marker_1e7c8628fda8ef0e6e04ee1173ffef75.bindPopup(popup_5ca1eb32f22a9b588fff7b7fafdcdce8)
+        ;
+
+        
+    
+    
+            marker_1e7c8628fda8ef0e6e04ee1173ffef75.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">연남동 369-17번지 -1층<br/>전용 71평<br/>보증금 5000만원 / 월세 380만원 / 관리비 30만원<br/>06년07월 준공<br/>첫 광고 등록일: 24.08.29</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_badeb7fd9054ea19f502e13223bf9d05 = L.marker(
+                [37.5807265327291, 127.003710170964],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_85045c41fee15073966412ca7343c2d4 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "7.9", "textColor": "white"}
+            )
+            marker_badeb7fd9054ea19f502e13223bf9d05.setIcon(beautify_icon_85045c41fee15073966412ca7343c2d4);
+        
+    
+        var popup_92071200188327342120732be0e86756 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b1588f898d88e360bd29f5456a8f6a13 = $(`<div id="html_b1588f898d88e360bd29f5456a8f6a13" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2453765621' target='_blank'>동숭동 1-136번지 -1층</a><br/>전용 52평<br/>보증금 3000만원 / 월세 360만원 / 관리비 50만원<br/>NOC 7.9<br/>자주식8대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/동숭동 1-136번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11110-29794&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_92071200188327342120732be0e86756.setContent(html_b1588f898d88e360bd29f5456a8f6a13);
+            
+        
+
+        marker_badeb7fd9054ea19f502e13223bf9d05.bindPopup(popup_92071200188327342120732be0e86756)
+        ;
+
+        
+    
+    
+            marker_badeb7fd9054ea19f502e13223bf9d05.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">동숭동 1-136번지 -1층<br/>전용 52평<br/>보증금 3000만원 / 월세 360만원 / 관리비 50만원<br/>90년09월 준공<br/>첫 광고 등록일: 23.11.10</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_785dcd372793afa4bd20539de8bfd127 = L.marker(
+                [37.4938479, 127.1441196],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_f3b54849dd0cbf2103b6586c1135a387 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.0", "textColor": "green"}
+            )
+            marker_785dcd372793afa4bd20539de8bfd127.setIcon(beautify_icon_f3b54849dd0cbf2103b6586c1135a387);
+        
+    
+        var popup_6d9ed515a1c9407923e6d2497378a49e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e260e8910a4973c5dae790fc5f4249b6 = $(`<div id="html_e260e8910a4973c5dae790fc5f4249b6" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=6000,6000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2448480495' target='_blank'>거여동 26-6번지 -2층</a><br/>전용 63평<br/>보증금 6000만원 / 월세 350만원 / 관리비 30만원<br/>NOC 6.0<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/거여동 26-6번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=000000000000&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_6d9ed515a1c9407923e6d2497378a49e.setContent(html_e260e8910a4973c5dae790fc5f4249b6);
+            
+        
+
+        marker_785dcd372793afa4bd20539de8bfd127.bindPopup(popup_6d9ed515a1c9407923e6d2497378a49e)
+        ;
+
+        
+    
+    
+            marker_785dcd372793afa4bd20539de8bfd127.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">거여동 26-6번지 -2층<br/>전용 63평<br/>보증금 6000만원 / 월세 350만원 / 관리비 30만원<br/>23년08월 준공<br/>첫 광고 등록일: 24.10.02</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4c8959302bb55e46cffb69e8c38eddef = L.marker(
+                [37.5048906, 127.088846],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_fa199fb37177f2821fa681176d6cb74f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "6.3", "textColor": "white"}
+            )
+            marker_4c8959302bb55e46cffb69e8c38eddef.setIcon(beautify_icon_fa199fb37177f2821fa681176d6cb74f);
+        
+    
+        var popup_fb4c42b002c2f042b210b6f802aa864b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0550271a2dca06ac7768d7312e04dfdd = $(`<div id="html_0550271a2dca06ac7768d7312e04dfdd" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=4000,4000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452437106' target='_blank'>삼전동 7-34번지 -1층</a><br/>전용 51평<br/>보증금 4000만원 / 월세 290만원 / 관리비 30만원<br/>NOC 6.3<br/>자주식0대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/삼전동 7-34번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=000000000000&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_fb4c42b002c2f042b210b6f802aa864b.setContent(html_0550271a2dca06ac7768d7312e04dfdd);
+            
+        
+
+        marker_4c8959302bb55e46cffb69e8c38eddef.bindPopup(popup_fb4c42b002c2f042b210b6f802aa864b)
+        ;
+
+        
+    
+    
+            marker_4c8959302bb55e46cffb69e8c38eddef.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">삼전동 7-34번지 -1층<br/>전용 51평<br/>보증금 4000만원 / 월세 290만원 / 관리비 30만원<br/>16년09월 준공<br/>첫 광고 등록일: 24.08.19</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa9a0f3f3b80166e7621a989ef4c9af4 = L.marker(
+                [37.5099775913833, 127.131243804662],
+                {}
+            ).addTo(marker_cluster_cb803ce3129735b26cc9371863b6f198);
+        
+    
+            var beautify_icon_670012995d4191150bf3116af919008d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "#ADD8E6", "borderColor": "#000", "borderWidth": 1, "iconSize": [30, 30], "innerIconStyle": "margin-top:6px;font-size:11px", "isAlphaNumericIcon": true, "spin": false, "text": "5.2", "textColor": "white"}
+            )
+            marker_fa9a0f3f3b80166e7621a989ef4c9af4.setIcon(beautify_icon_670012995d4191150bf3116af919008d);
+        
+    
+        var popup_7fb0d191144bd3f1c7fe93093282bddd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2a1e736da67941a7fa6643ab93351a5f = $(`<div id="html_2a1e736da67941a7fa6643ab93351a5f" style="width: 100.0%; height: 100.0%;"><div style="white-space: nowrap;"><a href='https://new.land.naver.com/offices?ms=3000,3000,19&a=SG:SMS:GM&b=B2&e=RETAIL&articleNo=2452614317' target='_blank'>오금동 3-4번지 -1층</a><br/>전용 61평<br/>보증금 3000만원 / 월세 240만원 / 관리비 80만원<br/>NOC 5.2<br/>자주식14대 / 기계식0대<br/><a href='https://map.naver.com/v5/search/오금동 3-4번지' target='_blank'>네이버지도</a><br/><a href='https://blcm.go.kr/lim/bldSumInfo/BldSumInfoView.do?bldrgstPk=11710-23412&searchPnu=1168010600008890033&searchType=B' target='_blank'>건축물대장</a></div></div>`)[0];
+                popup_7fb0d191144bd3f1c7fe93093282bddd.setContent(html_2a1e736da67941a7fa6643ab93351a5f);
+            
+        
+
+        marker_fa9a0f3f3b80166e7621a989ef4c9af4.bindPopup(popup_7fb0d191144bd3f1c7fe93093282bddd)
+        ;
+
+        
+    
+    
+            marker_fa9a0f3f3b80166e7621a989ef4c9af4.bindTooltip(
+                `<div>
+                     <div style="white-space: nowrap;">오금동 3-4번지 -1층<br/>전용 61평<br/>보증금 3000만원 / 월세 240만원 / 관리비 80만원<br/>91년06월 준공<br/>첫 광고 등록일: 24.08.30</div>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            marker_cluster_cb803ce3129735b26cc9371863b6f198.addTo(map_74e65d0a596c19baf8fd17646712c496);
+        
+</script>
+</html>
